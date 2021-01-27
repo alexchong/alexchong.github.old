@@ -25,7 +25,7 @@ export default function Header() {
   };
 
   return (
-    <header className="container flex flex-wrap justify-between mx-auto py-6 sm:flex-nowrap">
+    <header className="container flex flex-wrap justify-between mx-auto max-w-3xl px-6 md:px-9 py-6 sm:flex-nowrap">
       {/* Brand Logo */}
       <div className="flex lowercase md:w-full">
         <a className="flex font-black text-2xl sm:text-4xl" href="/">
@@ -63,10 +63,10 @@ export default function Header() {
           type="button"
           onClick={toggleTheme}
         >
-          <span className={`${theme === "light" ? "visible" : "hidden"}`}>
+          <span className={`${theme === "dark" ? "hidden" : ""}`}>
             <FontAwesomeIcon icon={faMoon} />
           </span>
-          <span className={`${theme === "light" ? "hidden" : "visible"}`}>
+          <span className={`${theme === "dark" ? "" : "hidden"}`}>
             <FontAwesomeIcon icon={faSun} />
           </span>
         </button>
