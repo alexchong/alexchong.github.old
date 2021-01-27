@@ -7,7 +7,8 @@ module.exports = {
       colors: {
         pidgin: {
           light: "#4660F6",
-          dark: "#232739",
+          DEFAULT: "#232739",
+          dark: "#080c21",
         },
         stickyNote: "#f9f4ec",
       },
