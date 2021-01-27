@@ -36,17 +36,23 @@ export default function Header() {
       <nav
         className={`${
           menu ? "" : "hidden"
-        } absolute flex items-center left-0 top-16 w-full md:relative md:top-0`}
+        } absolute md:relative md:flex bg-stickyNote dark:bg-pidgin-dark h-screen md:h-auto items-center top-16 left-0 w-full md:top-0`}
       >
-        <ul className="flex flex-col flex-grow font-black items-center lowercase text-lg md:flex-row md:text-xl">
-          <li className="mx-auto py-8 sm:py-0">
-            <a href="/blog">Posts</a>
+        <ul className="flex flex-col flex-grow font-black lowercase text-center text-lg md:flex-row md:text-xl">
+          <li className="cursor-pointer items-center w-full py-8 md:py-0">
+            <Link className="" href="/">
+              Posts
+            </Link>
           </li>
-          <li className="mx-auto py-8 sm:py-0">
-            <a href="/projects">Projects</a>
+          <li className="cursor-pointer w-full mx-auto py-8 md:py-0">
+            <Link className="" href="/portfolio">
+              Portfolio
+            </Link>
           </li>
-          <li className="mx-auto py-8 sm:py-0">
-            <a href="/about">About</a>
+          <li className="cursor-pointer w-full mx-auto py-8 md:py-0">
+            <Link className="" href="/about">
+              About
+            </Link>
           </li>
         </ul>
       </nav>
@@ -66,13 +72,13 @@ export default function Header() {
         </button>
         {/* Hamburger */}
         <button
-          className="flex flex-col cursor-pointer my-auto ml-auto rounded focus:outline-none md:hidden"
+          className="flex flex-col cursor-pointer my-auto rounded focus:outline-none md:hidden"
           type="button"
           onClick={handleMenu}
         >
-          <span className="block bg-black h-1 mb-1 relative rounded-sm w-8 dark:bg-gray-50" />
-          <span className="block bg-black h-1 mb-1 relative rounded-sm w-6 dark:bg-gray-50" />
-          <span className="block bg-black h-1 relative rounded-sm w-4 dark:bg-gray-50" />
+          <span className="block bg-black h-1 mb-1 ml-auto relative rounded-sm w-6 dark:bg-gray-50" />
+          <span className="block bg-black h-1 mb-1 ml-auto relative rounded-sm w-7 dark:bg-gray-50" />
+          <span className="block bg-black h-1 ml-auto relative rounded-sm w-5 dark:bg-gray-50" />
         </button>
       </div>
     </header>
