@@ -1,0 +1,1 @@
+{"ast":null,"code":"import Typography from \"typography\";\nimport usWebDesignStandardsTheme from \"typography-theme-us-web-design-standards\";\nexport const typography = new Typography(usWebDesignStandardsTheme);","map":null,"metadata":{},"sourceType":"module"}
