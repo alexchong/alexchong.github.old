@@ -1,5 +1,6 @@
 const withPlugins = require("next-compose-plugins");
 const optimizedImages = require("next-optimized-images");
+const user = process.env.USER;
 const isLocalDev = process.env.NVM_DIR === "/home/" + user + "/.nvm";
 
 const nextConfig = {
