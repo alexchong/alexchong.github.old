@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
-export default function Header() {
+export function Header() {
   const [menu, setMenu] = useState(false);
   const handleMenu = () => setMenu(!menu);
 
@@ -25,11 +25,11 @@ export default function Header() {
   };
 
   return (
-    <header className="container flex flex-wrap justify-between mx-auto max-w-3xl px-6 md:px-9 py-6 sm:flex-nowrap">
+    <header className="container flex flex-wrap bg-stickyNote dark:bg-pidgin-dark sticky z-50 top-0 justify-between mx-auto max-w-3xl px-6 md:px-9 py-6 md:flex-nowrap">
       {/* Brand Logo */}
       <div className="flex lowercase md:w-full">
-        <a className="flex font-black text-2xl sm:text-4xl" href="/">
-          <h1>Alex Chong</h1>
+        <a className="flex font-black text-2xl sm:text-3xl" href="/">
+          <span>Alex Chong</span>
         </a>
       </div>
       {/* Navigation */}
@@ -38,22 +38,21 @@ export default function Header() {
           menu ? "" : "hidden"
         } absolute md:relative md:flex bg-stickyNote dark:bg-pidgin-dark h-screen md:h-auto items-center top-16 left-0 w-full md:top-0`}
       >
-        <ul className="flex flex-col flex-grow font-black lowercase text-center text-lg md:flex-row md:text-xl">
-          <li className="cursor-pointer items-center w-full py-8 md:py-0">
-            <Link className="" href="/">
-              Posts
-            </Link>
+        <ul className="flex flex-col flex-grow font-black lowercase text-center text-lg md:text-xl md:flex-row">
+          <li className="cursor-pointer w-full my-auto py-8 md:py-0 hover:underline">
+            <Link href="/">Posts</Link>
           </li>
-          <li className="cursor-pointer w-full mx-auto py-8 md:py-0">
-            <Link className="" href="/portfolio">
-              Portfolio
-            </Link>
+          <li className="cursor-pointer w-full my-auto py-8 md:py-0 hover:underline">
+            <Link href="/portfolio">Portfolio</Link>
           </li>
-          <li className="cursor-pointer w-full mx-auto py-8 md:py-0">
-            <Link className="" href="/about">
-              About
-            </Link>
+          <li className="cursor-pointer w-full my-auto py-8 md:py-0 hover:underline">
+            <Link href="/about">About</Link>
           </li>
+          {/* <li className="cursor-pointer w-full my-auto py-8 md:py-0 hover:underline">
+            <Link href="/coffee">
+              #☕
+            </Link>
+          </li> */}
         </ul>
       </nav>
       <div className="flex">
