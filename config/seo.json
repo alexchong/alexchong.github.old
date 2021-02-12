@@ -1,0 +1,15 @@
+{
+  "siteMetadata": {
+    "title": "Alex Chong",
+    "author": {
+      "name": "Alex Chong",
+      "summary": "who is a software engineer based in Seattle."
+    },
+    "description": "A blog created with Next.js and Tailwind.css",
+    "siteUrl": "https://alexchong.github.io",
+    "language": "en-US",
+    "social": {
+      "twitter": ""
+    }
+  }
+}

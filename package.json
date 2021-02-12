@@ -1,25 +1,55 @@
 {
-  "name": "learn-starter",
-  "version": "0.1.0",
+  "name": "nextjs-blog-starter",
+  "version": "0.2.0",
+  "description": "A Next.js template for a blog website.",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start",
-    "test": "jest --watch"
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
-    "autoprefixer": "^10.2.3",
-    "gray-matter": "^4.0.2",
-    "next": "^10.0.0",
-    "next-themes": "0.0.10",
-    "postcss": "^8.2.4",
+    "clsx": "^1.1.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "lazysizes": "^5.2.2",
+    "lqip-loader": "^2.2.1",
+    "next": "10.0.3",
+    "next-optimized-images": "^2.6.2",
+    "next-themes": "^0.0.10",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "stylelint-config-recommended": "^3.0.0",
-    "tailwindcss": "^2.0.2"
-  }
+    "react-fontawesome": "^1.7.1",
+    "react-markdown": "^5.0.3",
+    "react-syntax-highlighter": "^15.3.1",
+    "react-toggle-dark-mode": "^1.0.3",
+    "react-typography": "^0.16.19",
+    "typeface-merriweather": "^1.1.13",
+    "typeface-open-sans": "^1.1.13",
+    "typography": "^0.16.19",
+    "typography-theme-us-web-design-standards": "^0.16.19",
+    "webp-loader": "^0.6.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.3.1",
+    "autoprefixer": "^10.0.4",
+    "gray-matter": "^4.0.2",
+    "next-compose-plugins": "^2.2.1",
+    "postcss": "^8.1.10",
+    "tailwindcss": "^2.0.1"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jfelix61/nextjs-starter-blog.git"
+  },
+  "homepage": "https://github.com/Jfelix61/nextjs-starter-blog#readme",
+  "keywords": [
+    "next.js",
+    "blog",
+    "template"
+  ]
 }

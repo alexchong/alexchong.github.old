@@ -1,18 +1,19 @@
-import React from "react";
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import { render } from "react-dom";
+import Document, { Head, Main, NextScript, Html } from "next/document";
+import { TypographyStyle } from "react-typography";
+import { typography } from "@utils/typography";
 
-export default class _Document extends Document {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
-  }
+import { getSiteMetaData } from "@utils/helpers";
 
+export default class MyDocument extends Document {
   render() {
+    const siteMetadata = getSiteMetaData();
+
     return (
-      <Html>
-        <Head />
-        <body className="bg-stickyNote dark:bg-pidgin-dark dark:text-gray-50">
+      <Html lang={siteMetadata.language} className="h-full">
+        <Head>
+          <TypographyStyle typography={typography} />
+        </Head>
+        <body className="h-full overflow-visible static bg-stickyNote dark:bg-pidgin-dark dark:text-gray-50">
           <Main />
           <NextScript />
         </body>
@@ -20,17 +21,3 @@ export default class _Document extends Document {
     );
   }
 }
-
-// export default function Document() {
-//   return (
-//     <Html>
-//       <Head />
-//       <body className="bg-white text-black dark:bg-black dark:text-white">
-//         <Layout>
-//           <Main />
-//           <NextScript />
-//         </Layout>
-//       </body>
-//     </Html>
-//   );
-// }
