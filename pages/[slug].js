@@ -12,7 +12,7 @@ export default function Page({ page, frontmatter }) {
       />
       <article className="article">
         <header className="mb-8">
-          <h1 className="mb-2 text-2xl md:text-3xl leading-none">
+          <h1 className="mb-2 text-2xl md:text-3xl font-bold leading-none">
             {frontmatter.title}
           </h1>
           {/* <p className="text-sm">{frontmatter.date}</p> */}
