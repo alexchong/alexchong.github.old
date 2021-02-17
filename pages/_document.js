@@ -9,14 +9,12 @@ export default class MyDocument extends Document {
     const siteMetadata = getSiteMetaData();
 
     return (
-      <Html lang={siteMetadata.language} className="h-full">
+      <Html lang={siteMetadata.language}>
         <Head>
           <TypographyStyle typography={typography} />
         </Head>
-        <body className="h-full overflow-visible static bg-stickyNote dark:bg-pidgin-dark dark:text-gray-50">
-          <Main />
-          <NextScript />
-        </body>
+        <Main />
+        <NextScript />
       </Html>
     );
   }

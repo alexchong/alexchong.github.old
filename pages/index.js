@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Layout, Bio, SEO } from "@components/common";
+import { Layout, Hero, SEO } from "@components/common";
 import { getSortedPosts } from "@utils/posts";
 
 export default function Home({ posts }) {
@@ -8,28 +8,27 @@ export default function Home({ posts }) {
     <Layout>
       <SEO title="Home" />
       {/* TODO: Use Bio component for this section */}
+      {/* <Hero /> */}
       {posts.map(({ frontmatter: { title, description, date }, slug }) => (
         <article
-          className="pb-4 mb-4 border-b border-gray dark:border-gray-800"
+          className="mb-4 border-b border-gray dark:border-gray-500"
           key={slug}
         >
-          <header className="mb-2">
-            <h3 className="mb-2">
-              <Link href={"/post/[slug]"} as={`/post/${slug}`}>
-                <a className="text-2xl md:text-3xl font-bold hover:bg-yellow-200 dark:hover:bg-pidgin-light">
-                  {title}
-                </a>
-              </Link>
-            </h3>
-          </header>
-          <section>
-            <p className="mb-2 text-lg text-gray-500 dark:text-gray-200">
-              {description}
-            </p>
-            <span className="text-sm text-gray-500 dark:text-gray-200">
-              {date}
-            </span>
-          </section>
+          <Link href={"/post/[slug]"} as={`/post/${slug}`}>
+            <a className="text-2xl md:text-3xl hover:opacity-60">
+              <header className="mb-2 text-black dark:text-white">
+                <h2 className="mb-2">{title}</h2>
+              </header>
+              <section>
+                <p className="mb-2 text-lg text-gray-500 dark:text-gray-200">
+                  {description}
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-200">
+                  {date}
+                </p>
+              </section>
+            </a>
+          </Link>
         </article>
       ))}
     </Layout>
