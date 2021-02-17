@@ -48,49 +48,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [
-    plugin(function ({ addComponents }) {
-      // TODO: Refactor Markdown styling here or other means (i.e. typography.js override or main.css)
-      const article = {
-        ".article h2": {
-          fontSize: "1.5rem",
-          lineHeight: "2rem",
-        },
-        ".article h3": {
-          fontSize: "1.25rem",
-          lineHeight: "1.75rem",
-        },
-        ".article h2,.article h3,.article  h4,.article  h5.article": {
-          fontWeight: "bold",
-          marginBottom: "1.5rem",
-        },
-        ".article p": {
-          marginBottom: "1.5rem",
-        },
-        ".article a": {
-          color: "#e50b4f !important",
-        },
-        ".article a:hover": {
-          textDecoration: "underline",
-        },
-        ".article pre": {
-          marginBottom: "1.5rem !important", // override react-syntax-highlighter
-        },
-        ".article ol": {
-          listStyle: "decimal",
-          margin: "0 0 1.5rem 1rem",
-        },
-        ".article ul": {
-          listStyle: "disc",
-          margin: "0 0 1.5rem 1rem",
-        },
-        ".article blockquote": {
-          marginBottom: "1.5rem, 0",
-        },
-      };
-      addComponents(article);
-    }),
-  ],
+  plugins: [],
 };
 
 // const defaultSans = [

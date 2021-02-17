@@ -1,7 +1,7 @@
+import React from "react";
 import ReactMarkdown from "react-markdown/with-html";
-// import { useRouter } from "next/router";
 import { getPageBySlug, getPagesSlugs } from "@utils/pages";
-import { Layout, SEO, Bio } from "@components/common";
+import { Layout, SEO, Image, Bio } from "@components/common";
 
 export default function Page({ page, frontmatter }) {
   return (
@@ -10,18 +10,19 @@ export default function Page({ page, frontmatter }) {
         title={frontmatter.title}
         description={frontmatter.description || page.excerpt}
       />
-      <article className="article">
+      <article className="content">
         <header className="mb-8">
-          <h1 className="mb-2 text-2xl md:text-3xl font-bold leading-none">
-            {frontmatter.title}
-          </h1>
+          <h1 className="mb-2">{frontmatter.title}</h1>
           {/* <p className="text-sm">{frontmatter.date}</p> */}
         </header>
         <ReactMarkdown
-          className="mb-4 prose text-lg md:text-xl lg:prose-lg dark:prose-dark"
+          className="mb-4 prose lg:prose-lg dark:prose-dark"
           escapeHtml={false}
           source={page.content}
-          renderers={{ image: MarkdownImage }}
+          renderers={{
+            image: MarkdownImage,
+            heading: HeadingRenderer,
+          }}
         />
         <hr className="mt-4" />
         {/* <footer>
@@ -55,3 +56,20 @@ const MarkdownImage = ({ alt, src }) => (
     className="w-full"
   />
 );
+
+function flatten(text, child) {
+  return typeof child === "string"
+    ? text + child
+    : React.Children.toArray(child.props.children).reduce(flatten, text);
+}
+
+function HeadingRenderer(props) {
+  var children = React.Children.toArray(props.children);
+  var text = children.reduce(flatten, "");
+  // Slug regex for heading anchor IDs
+  var slug = text
+    .toLowerCase()
+    .replace(/([()?])|(.#)/g, "") // sanitize target characters
+    .replace(/\W/g, "-"); // replace non-alphanumerics to hyphens
+  return React.createElement("h" + props.level, { id: slug }, props.children);
+}
