@@ -1,7 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./content.css";
 
-a:visited {
-  color: inherit;
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-bold mb-6;
+  }
+  h1 {
+    @apply text-2xl md:text-3xl;
+  }
+  h2 {
+    @apply text-xl md:text-2xl;
+  }
+  h3 {
+    @apply text-lg md:text-xl;
+  }
+  h4 {
+    @apply text-base md:text-lg;
+  }
+  body {
+    @apply h-full overflow-visible static bg-stickyNote text-black dark:bg-pidgin-dark dark:text-white;
+  }
+  header,
+  nav {
+    a,
+    a:visited {
+      color: inherit;
+    }
+    a:hover {
+      @apply opacity-60 !important;
+    }
+  }
+  p {
+    @apply mb-6 md:text-lg;
+  }
+  :target:before {
+    content: "";
+    display: block;
+    height: 100px;
+    margin-top: -100px;
+  }
+}
+
+@layer components {
+  @import "./components.css";
 }
