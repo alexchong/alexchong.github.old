@@ -6,7 +6,7 @@ date: 2020-02-17
 
 After spending much time and energy laying the groundwork, I'm excited to announce that I am finally able to launch this site for my blog and portfolio use.
 
-## Inspiration
+## Inspiration [#](#inspiration)
 
 My overall goal with this website (to add onto my [what I wrote in the About page](/about#why-this-website)) is to help further demonstrate my technical and communicative competence through writing.
 
@@ -23,6 +23,6 @@ Some of the posts I've seen that he claims as basic, are actually well-written o
 
 Overall, seems like a neat way to express my personality both formally and informally; beyond the elevator pitch.
 
-## Next Steps
+## Next Steps [#](#next-steps)
 
 **I want to use this opportunity to produce content that is helpful and relevant to those that might read it.** Ideally it would be around software/web development and cybersecurity; to include any research findings, guides & tutorials, or any other write-ups I believe would add value to the discussion. In addition, I'd also like to write about non-technology stuff too (like a review for a weightlifting program, or some useful lifehacks).
