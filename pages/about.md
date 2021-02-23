@@ -3,19 +3,25 @@ title: About Me
 description: About Me
 ---
 
-I'm a software engineer based in Seattle, WA. I grew up in Mililani/Wahiawa, Hawaii and lived my most recent years overseas with the United States Air Force. While serving 6 years in the military, I graduated from [UMGC](https://www.umgc.edu/academic-programs/bachelors-degrees/software-development-and-security.cfm) with Bachelor's of Science in Software Development and (Application) Security; with a Minor in Cybersecurity.
+I'm a software engineer based in Seattle, WA. I grew up in Mililani/Wahiawa, Hawaii and spent the last five years overseas, serving with the United States Air Force (a story for another blog post 😎)
 
-I spend most of my software development time doing research and building understanding, then roll out implementations for my own use cases.
+## What are you all about? [#](#what-are-you-all-about)
 
-## What I do for work now [#](#what-i-do-for-work-now)
+I graduated from [UMGC](https://www.umgc.edu/academic-programs/bachelors-degrees/software-development-and-security.cfm) and studied Software Development and (Application) Security; with a Minor in Cybersecurity.
 
-I provide teaching assistance in a couple of Computer Science courses (C# and HTML/CSS/JS) with [SMU](https://www.stmartin.edu/academics/programs-schools/hal-and-inge-marcus-school-engineering/areas-of-study/microsoft-software-and-systems-academy), and train every month as a SOC analyst with the Washington Air National Guard.
+In the past, I've worked on anything from general-purpose applications (Java; C#), automated scripts (Python; Bash), to web interfaces (React; HTML/CSS/JavaScript)
 
-## Why this website? [#](#why-this-website)
+Currently, I spend most of my software development time doing research and building understanding around web and scripting technologies, then roll out passion implementations for my own use cases.
+
+## What are you enthusiastic for? [#](#what-are-you-enthusiastic-for)
+
+I care about purpose-driven work, and have a concern for achieving the perfect combination of accesibility and security for user experience (UX) and developer experience (DX).
+
+## Why build this website? [#](#why-build-this-website)
 
 I wanted to learn how to build a website with [NextJS](https://nextjs.org/) because it's a [relevant](https://nextjs.org/showcase) (React) framework for web development, and it provides me [hybrid rendering](https://nextjs.org/docs/advanced-features/automatic-static-optimization) options should this scale beyond statically generated content.
 
-It also serves as motivation for me to start writing about stuff I like (tech and non-tech) and to continue creating projects to showcase here.
+It also serves as motivation for me to write about random stuff I like (tech and non-tech), and to showcase my projects. Find out more about my overall goal in my [first blog post](/post/telegraphing-competence).
 
 ## Contact me [#](#contact-me)
 
