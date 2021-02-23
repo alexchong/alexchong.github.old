@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import { Layout, Hero, SEO } from "@components/common";
 import { getSortedPosts } from "@utils/posts";
 
@@ -7,11 +6,10 @@ export default function Home({ posts }) {
   return (
     <Layout>
       <SEO title="Home" />
-      {/* TODO: Use Bio component for this section */}
-      {/* <Hero /> */}
+      <Hero />
       {posts.map(({ frontmatter: { title, description, date }, slug }) => (
         <article
-          className="mb-4 border-b border-gray dark:border-gray-500"
+          className="mb-4 pb-4 border-b border-gray dark:border-gray-500"
           key={slug}
         >
           <Link href={"/post/[slug]"} as={`/post/${slug}`}>
@@ -20,11 +18,11 @@ export default function Home({ posts }) {
                 <h2 className="mb-2">{title}</h2>
               </header>
               <section>
-                <p className="mb-2 text-lg text-gray-500 dark:text-gray-200">
-                  {description}
-                </p>
                 <p className="text-sm text-gray-500 dark:text-gray-200">
                   {date}
+                </p>
+                <p className="text-lg text-gray-500 dark:text-gray-200">
+                  {description}
                 </p>
               </section>
             </a>

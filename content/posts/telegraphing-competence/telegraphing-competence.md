@@ -1,6 +1,6 @@
 ---
 title: '"Telegraphing Competence"'
-description: "A site introduction, and thoughts on moving forward with blogging"
+description: "Site introduction, and thoughts on moving forward with writing content"
 date: 2020-02-17
 ---
 
