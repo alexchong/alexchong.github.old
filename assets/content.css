@@ -23,4 +23,7 @@
   blockquote p {
     @apply text-base;
   }
+  p {
+    @apply mb-6;
+  }
 }
