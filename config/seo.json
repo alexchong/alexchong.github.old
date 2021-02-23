@@ -2,14 +2,18 @@
   "siteMetadata": {
     "title": "Alex Chong",
     "author": {
-      "name": "Alex Chong",
-      "summary": "who is a software engineer based in Seattle."
+      "firstname": "Alex",
+      "lastname": "Chong",
+      "summary": "Software Engineer based in Seattle, WA"
     },
     "description": "A blog created with Next.js and Tailwind.css",
     "siteUrl": "https://alexchong.github.io",
     "language": "en-US",
+    "resume": "https://www.dropbox.com/s/r2uvznqmtb2xo77/Alex%20Chong%20Resume.pdf?dl=0",
     "social": {
-      "twitter": ""
+      "linkedin": "https://www.linkedin.com/in/itsalexchong",
+      "github": "https://www.github.com/alexchong",
+      "email": "alex.b.chong@outlook.com"
     }
   }
 }

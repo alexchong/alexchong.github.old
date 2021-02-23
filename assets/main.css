@@ -26,6 +26,14 @@
   body {
     @apply h-full overflow-visible static bg-stickyNote text-black dark:bg-pidgin-dark dark:text-white;
   }
+  section {
+    a {
+      color: #e50b4f !important;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
   header,
   nav {
     a,
@@ -37,7 +45,7 @@
     }
   }
   p {
-    @apply mb-6 md:text-lg;
+    @apply md:text-lg;
   }
   :target:before {
     content: "";

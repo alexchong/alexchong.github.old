@@ -38,14 +38,12 @@ export function Header() {
           menu ? "" : "hidden"
         } absolute bg-stickyNote dark:bg-pidgin-dark md:relative md:flex h-screen md:h-auto items-center top-16 left-0 w-full md:top-0`}
       >
-        <ul className="flex flex-col flex-grow font-black lowercase text-center text-lg md:text-xl md:flex-row">
-          <li className="cursor-pointer w-full my-auto py-8 md:py-0">
+        <ul className="flex flex-col font-black lowercase text-center text-lg md:text-xl md:flex-row md:ml-auto">
+          <li className="cursor-pointer w-full my-auto mr-4 py-8 md:py-0">
             <Link href="/">Posts</Link>
           </li>
-          <li className="cursor-pointer w-full my-auto py-8 md:py-0">
-            <Link href="/portfolio">Portfolio</Link>
-          </li>
-          <li className="cursor-pointer w-full my-auto py-8 md:py-0">
+          {/* TODO: Portfolio page */}
+          <li className="cursor-pointer w-full my-auto mr-4 py-8 md:py-0">
             <Link href="/about">About</Link>
           </li>
         </ul>
