@@ -1,24 +1,18 @@
 .content {
   a {
-    color: #e50b4f !important;
+    @apply text-pink-600;
   }
   a:hover {
-    text-decoration: underline;
+    @apply underline;
   }
   pre {
-    margin-bottom: 1.5rem !important;
+    @apply mb-6;
   }
   ol {
-    list-style: decimal;
-    margin: 0 0 1.5rem 1rem;
+    @apply list-decimal mb-6 ml-4;
   }
   ul {
-    list-style: disc;
-    margin: 0 0 1.5rem 1rem;
-  }
-  blockquote {
-    @apply text-base opacity-80;
-    margin-bottom: 1.5rem 0;
+    @apply list-disc mb-6 ml-4;
   }
   blockquote p {
     @apply text-base;
