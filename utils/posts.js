@@ -1,13 +1,12 @@
 import matter from "gray-matter";
 import fs from "fs";
 
-export function getPostsFolders() {
-  // Get all posts folders located in `content/posts`
+export function getPostsNames() {
+  // Map all posts located in `content/posts`
   const postsFolders = fs
     .readdirSync(`${process.cwd()}/content/posts`)
-    .map((folderName) => ({
-      directory: folderName,
-      filename: `${folderName}.md`,
+    .map((post) => ({
+      filename: `${post}`,
     }));
 
   return postsFolders;
@@ -22,13 +21,13 @@ function getFormattedDate(date) {
 }
 
 export function getSortedPosts() {
-  const postFolders = getPostsFolders();
+  const postsFolder = getPostsNames();
 
-  const posts = postFolders
-    .map(({ filename, directory }) => {
-      // Get raw content from file
+  const posts = postsFolder
+    .map(({ filename }) => {
+      // Get raw content from post
       const markdownWithMetadata = fs
-        .readFileSync(`content/posts/${directory}/${filename}`)
+        .readFileSync(`content/posts/${filename}`)
         .toString();
 
       // Parse markdown, get frontmatter data, excerpt and content.
@@ -57,9 +56,9 @@ export function getSortedPosts() {
 }
 
 export function getPostsSlugs() {
-  const postFolders = getPostsFolders();
+  const postsFolder = getPostsNames();
 
-  const paths = postFolders.map(({ filename }) => ({
+  const paths = postsFolder.map(({ filename }) => ({
     params: {
       slug: filename.replace(".md", ""),
     },

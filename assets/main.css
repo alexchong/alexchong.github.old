@@ -27,8 +27,8 @@
     @apply h-full overflow-visible static bg-stickyNote text-black dark:bg-pidgin-dark dark:text-white;
   }
   section {
-    a {
-      color: #e50b4f !important;
+    a:visited {
+      color: inherit;
     }
     a:hover {
       text-decoration: underline;
@@ -47,6 +47,10 @@
   p {
     @apply md:text-lg;
   }
+  blockquote {
+    @apply text-base opacity-90 mb-6 dark:border-gray-100;
+  }
+  /* offset navigation when jumping anchor links */
   :target:before {
     content: "";
     display: block;

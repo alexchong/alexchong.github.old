@@ -4,10 +4,20 @@ import ReactMarkdown from "react-markdown/with-html";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import style from "react-syntax-highlighter/dist/cjs/styles/prism/dracula";
 
-import { Layout, SEO, Bio, Image } from "@components/common";
+import { Layout, SEO, Image } from "@components/common";
 import { getPostBySlug, getPostsSlugs } from "@utils/posts";
 
 export default function Post({ post, frontmatter, nextPost, previousPost }) {
+  // const tags = [];
+
+  // for (let tag of frontmatter.tags) {
+  //   tags.push(
+  //     <li className="bg-black dark:bg-pidgin" key={tag}>
+  //       #{tag}
+  //     </li>
+  //   );
+  // }
+
   return (
     <Layout>
       <SEO
@@ -15,15 +25,22 @@ export default function Post({ post, frontmatter, nextPost, previousPost }) {
         description={frontmatter.description || post.excerpt}
       />
 
-      <article className="content">
+      <article>
         <header className="mb-8">
           <h1 className="mb-2">{frontmatter.title}</h1>
-          <p className="text-sm text-gray-500 dark:text-gray-200">
+          <p className="mb-2 text-sm text-gray-500 dark:text-gray-200">
             {frontmatter.date}
           </p>
+          <ul className="tags">
+            {frontmatter.tags.map((tag) => (
+              <li className="bg-black opacity-90 dark:bg-pidgin dark:opacity-100">
+                #{tag}
+              </li>
+            ))}
+          </ul>
         </header>
         <ReactMarkdown
-          className="mb-4 prose lg:prose-lg dark:prose-dark"
+          className="content mb-4 prose lg:prose-lg dark:prose-dark"
           escapeHtml={false}
           source={post.content}
           renderers={{
@@ -33,9 +50,6 @@ export default function Post({ post, frontmatter, nextPost, previousPost }) {
           }}
         />
         <hr className="mt-4" />
-        {/* <footer>
-          <Bio className="mt-8 mb-16" />
-        </footer> */}
       </article>
 
       <nav className="flex flex-wrap justify-between mb-10">
