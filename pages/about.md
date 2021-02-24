@@ -21,7 +21,7 @@ I care about purpose-driven work, and have a concern for achieving the perfect c
 
 I wanted to learn how to build a website with [NextJS](https://nextjs.org/) because it's a [relevant](https://nextjs.org/showcase) (React) framework for web development, and it provides me [hybrid rendering](https://nextjs.org/docs/advanced-features/automatic-static-optimization) options should this scale beyond statically generated content.
 
-It also serves as motivation for me to write about random stuff I like (tech and non-tech), and to showcase my projects. Find out more about my overall goal in my [first blog post](/post/telegraphing-competence).
+It also serves as motivation for me to write about random stuff I like (tech and non-tech), and to showcase my projects. Find out more about my overall goal in my [first post](/post/telegraphing-competence).
 
 ## Contact me [#](#contact-me)
 
