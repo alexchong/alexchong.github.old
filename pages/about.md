@@ -5,7 +5,7 @@ description: About Me
 
 I'm a software engineer based in Seattle, WA. I grew up in Mililani/Wahiawa, Hawaii and spent the last five years overseas, serving with the United States Air Force (a story for another blog post 😎)
 
-## What are you all about? [#](#what-are-you-all-about)
+## What's your background?
 
 I graduated from [UMGC](https://www.umgc.edu/academic-programs/bachelors-degrees/software-development-and-security.cfm) and studied Software Development and (Application) Security; with a Minor in Cybersecurity.
 
@@ -13,9 +13,11 @@ In the past, I've worked on anything from general-purpose applications (Java; C#
 
 Currently, I spend most of my software development time doing research and building understanding around web and scripting technologies, then roll out passion implementations for my own use cases.
 
-## What are you enthusiastic for? [#](#what-are-you-enthusiastic-for)
+## What are you most enthusiastic for? [#](#what-are-you-enthusiastic-for)
 
-I care about purpose-driven work, and have a concern for achieving the perfect combination of accesibility and security for user experience (UX) and developer experience (DX).
+I care about purpose-driven work, and have a concern for achieving the perfect combination of accesibility and security through user experience (UX) and developer experience (DX).
+
+To me, this means delivering honest communication with a functional aesthetic through the product -- all the while supporting a mission of keeping information/data secure. One domain that matches this description is Identity and Access Management, but I would define the general category of full stack being my passion stack.
 
 ## Why build this website? [#](#why-build-this-website)
 
