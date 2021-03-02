@@ -2,11 +2,11 @@
   "siteMetadata": {
     "title": "Alex Chong",
     "author": {
-      "firstname": "Alex",
-      "lastname": "Chong",
+      "firstName": "Alex",
+      "lastName": "Chong",
       "summary": "Software Engineer based in Seattle, WA"
     },
-    "description": "A blog created with Next.js and Tailwind.css",
+    "description": "",
     "siteUrl": "https://alexchong.github.io",
     "language": "en-US",
     "resume": "https://www.dropbox.com/s/r2uvznqmtb2xo77/Alex%20Chong%20Resume.pdf?dl=0",

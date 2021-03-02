@@ -5,7 +5,7 @@ import { getSortedPosts } from "@utils/posts";
 export default function Home({ posts }) {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Alex Chong" />
       <Hero />
       {posts.map(
         ({ frontmatter: { title, description, tags, date }, slug }) => (
@@ -27,7 +27,10 @@ export default function Home({ posts }) {
                   </p>
                   <ul className="tags">
                     {tags.map((tag) => (
-                      <li className="bg-black opacity-90 dark:bg-pidgin dark:opacity-100">
+                      <li
+                        className="bg-black opacity-90 dark:bg-pidgin dark:opacity-100"
+                        key={tag}
+                      >
                         #{tag}
                       </li>
                     ))}

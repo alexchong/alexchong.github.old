@@ -1,4 +1,5 @@
 import Head from "next/head";
+import fs from "fs";
 
 import { getSiteMetaData } from "@utils/helpers";
 
@@ -7,11 +8,21 @@ export function SEO({ title, description = "" }) {
 
   const metaDescription = description || siteMetadata.description;
 
+  const isHomePage = () => {
+    if (title == siteMetadata.title) {
+      return <title>{siteMetadata.title}</title>;
+    } else {
+      return (
+        <title>
+          {title} | {siteMetadata.title}
+        </title>
+      );
+    }
+  };
+
   return (
     <Head>
-      <title>
-        {title} | {siteMetadata.title}
-      </title>
+      {isHomePage()}
       <meta name="description" content={metaDescription} />
       <meta property="og:type" content="website" />
       <meta name="og:title" property="og:title" content={title} />
