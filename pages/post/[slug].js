@@ -33,7 +33,10 @@ export default function Post({ post, frontmatter, nextPost, previousPost }) {
           </p>
           <ul className="tags">
             {frontmatter.tags.map((tag) => (
-              <li className="bg-black opacity-90 dark:bg-pidgin dark:opacity-100">
+              <li
+                key={tag}
+                className="bg-black opacity-90 dark:bg-pidgin dark:opacity-100"
+              >
                 #{tag}
               </li>
             ))}
