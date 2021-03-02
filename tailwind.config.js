@@ -37,7 +37,8 @@ module.exports = {
           DEFAULT: "#232739",
           dark: "#080c21",
         },
-        stickyNote: "#f9f4ec",
+        //stickyNote: "#f9f4ec",
+        stickyNote: "#fefdfb",
       },
     },
     fontFamily: {

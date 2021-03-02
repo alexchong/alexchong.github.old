@@ -84,7 +84,7 @@ One thing that I should be mention is to think of digital security in the same t
 
 Centralizing your login credentials with one source (i.e. a online password manager) seems like single-point-of-failure, but Bitwarden does their best to make it clear in their [Security FAQ](https://bitwarden.com/help/article/security-faqs/) why their app and service can be trusted. 
 
-Solutions to this caveat include a mitigation technique that could be used ["manually salt"](https://passwordbits.com/salting-passwords/) your most important passwords (like a master password/passphrase). Also, multi-factor authentication should be discussed to add that extra layer of security -- but for now we'll stay the main topic of discussing one-factor authentication that is memorized secrets or passwords.
+Solutions to this caveat include a mitigation technique that could be used ["manually salt"](https://passwordbits.com/salting-passwords/) your most important passwords (like a master password/passphrase). Also, multi-factor authentication should be achieved to add that extra layer of security. But for now we'll stay the on main topic of discussing one-factor authentication, which is improving your memorized secrets or passwords game.
 
 ### Use a master passphrase (for your password manager)
 
