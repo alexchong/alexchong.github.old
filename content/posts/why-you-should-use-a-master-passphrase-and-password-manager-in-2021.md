@@ -1,8 +1,8 @@
 ---
 title: "Why You Should Use a Master Passphrase and Password Manager in 2021"
-description: "Avoid using one password for everything (like I did)"
+description: "Avoid using a single password for everything (like I did up until 2018)"
 tags: ["authentication", "policy", "security"]
-date: 2021-02-23
+date: 2021-03-02
 ---
 
 ## Table of Contents
@@ -12,6 +12,7 @@ date: 2021-02-23
 - [Security vs Usability](#security-vs-usability)
 - [Solution](#solution)
   - [Use a password manager](#use-a-password-manager)
+    - [Caveat](#caveat)
   - [Use a master passphrase (for your password manager)](#use-a-master-passphrase-for-your-password-manager)
 - [Conclusion](#conclusion)
 - [Footnotes](#footnotes)
@@ -20,17 +21,17 @@ date: 2021-02-23
 
 A few years ago, both my primary email address and _only_ password at the time (used with >30 of my other online accounts) were stolen through the massive [MyFitnessPal data breach](https://content.myfitnesspal.com/security-information/FAQ.html).
 
-According to [NIST](https://pages.nist.gov/800-63-3/sp800-63b.html#5111-memorized-secret-authenticators) guidelines, my password was moderately strong in length. In addition, it was hashed with a `salt`<sup>[1](#1)</sup> using the industry-standard cryptographic hashing algorithm called [Bcrypt](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#modern-algorithms). Theoretically, this password _should_ be impossible to crack, given the benefit best password security practices were followed. But it is always safe to assume the worst, or that they didn't.
+According to [NIST](https://pages.nist.gov/800-63-3/sp800-63b.html#5111-memorized-secret-authenticators) guidelines, my password was moderately strong in length. It was also hashed with a `salt`<sup>[1](#1)</sup> using a industry-standard hashing algorithm called [Bcrypt](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#modern-algorithms). Theoretically, this password _should_ be impossible to crack, given the benefit best password security practices were followed. But it is always safe to assume the worst, or that they didn't.
 
-Even large OAuth or third-party sign-on providers like [Google](https://cloud.google.com/blog/products/g-suite/notifying-administrators-about-unhashed-password-storage) and [Facebook](https://about.fb.com/news/2019/03/keeping-passwords-secure/) have been honest with (and mitigated) storing their user passwords in `plain-text`. **Regarding risk management, mistakes or accidents do eventually happen even today.**
+Even large OAuth or third-party sign-on providers like [Google](https://cloud.google.com/blog/products/g-suite/notifying-administrators-about-unhashed-password-storage) and [Facebook](https://about.fb.com/news/2019/03/keeping-passwords-secure/) have been admitted (and mitigated) storing their user passwords in `plain-text`. **Regarding risk management, mistakes or accidents eventually happen with anyone.**
 
 ## Compromised Password Scenarios
 
-1. A `plain-text password` is human-readable, and is presumed to be mapped with your email address in the breached database. In the events with Google and Facebook, they did not experience a known data breach here; they just internally caught and mitigated the issue.
-2. A `hashed password` may not have a random `salt` (or any `salt` at all), or not have a high default hashing `cost`<sup>[2](#2)</sup>. It is impossible to passively learn this information unless provided externally by the organization which in itself is a security risk for them.
+1. A `plain-text password` is human-readable, and is presumed to be mapped with an email address in the breached database. In the events with Google and Facebook, they did not experience a known data breach here; they just internally caught and mitigated the issue.
+2. A `hashed password` may not have a random `salt` (or any `salt` at all), or not have a high hashing `cost`<sup>[2](#2)</sup>. It is impossible to passively learn this information unless provided externally by the organization which in itself is a security risk for them.
 3. The database containing both the `salt` and `hash` (normally stored together within the same dataset) is compromised, despite using a hashing algorithm like Bcrypt. In this instance, [what most likely happened with MyFitnessPal](https://www.theregister.com/2019/02/11/620_million_hacked_accounts_dark_web/)
 
-In the case of any organization -- there is only so much they can do to protect your login credentials (e.g. enforcing password policies, securing databases, secure connection) before that responsibility falls on the individual to follow their own best password practices.
+In the case of any organization -- there is only so much they can do to protect their user base login credentials (e.g. enforcing password policies, securing databases, secure connection) before the responsibility falls on the individual to follow best password practices.
 
 ## Security vs Usability
 
@@ -59,15 +60,23 @@ All of which, including some other variation of `Password1!` that uses a differe
 ### Use a password manager
 
 Using a _dedicated_ password manager like [Bitwarden](https://bitwarden.com/) would help:
-- Store all your login credentials (much like how the saved login function works on your phone or browser)
-- Store encrypted secure notes on the cloud (e.g. using it as running CV to remember mailing addresses, or to track subscriptions you're signed up for)
-- Auto-fill login credentials across multiple desktop/mobile with Bitwarden installed
+- Store all your login credentials _securely_ to help with memorizing everything
+- Store encrypted secure notes (e.g. using it as running CV to remember mailing addresses, or to track subscriptions you're signed up for)
+- Auto-fill login credentials across multiple desktop/mobile
 - Generate a random secure password for each account you own, if you do decide to change a password on your next login for that account.
 
 Aside from the listed benefits, the main purpose of having a password manager in the context of this write up is to **have an easy way of generating and accessing a burner password for each account to include:**
 - At least a minimum of 12 characters (you won't be memorizing these passwords, so go for more if you would like to)
 - Include all character sets provided in the password generation (e.g. A-Z, a-z, 0-9, special characters)
 - Include a number and special character minimum, and avoid ambiguous characters
+
+#### Caveat
+
+One thing that I should be mention is to think of digital security in the same terms as physical security. An impenetrable system is either highly impractible or impossible for a normal user to achieve, but have a level of security high enough to motivate a threat actor to move onto easier vulnerable targets.
+
+Centralizing your login credentials with one source (i.e. a online password manager) seems like single-point-of-failure, but Bitwarden does make it clear in their [Security FAQ](https://bitwarden.com/help/article/security-faqs/) why their app and services can be trusted. 
+
+A _mitigation_ technique could be used ["manually salt"](https://passwordbits.com/salting-passwords/) your most important passwords (like your master password), or we could talk about multi-factor authentication, but for now lets stay on topic.
 
 ### Use a master passphrase (for your password manager)
 
@@ -104,6 +113,6 @@ Entropy<sup>[3](#3)</sup> for this is `53 bits` or `95^8` possible password comb
 
 <sup id="2">1</sup> [OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#salting) defines **salt** as a unique, randomly generated string that is added to each password. [Dan Arias](https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/) of Auth0, and [Baeldung](https://www.baeldung.com/java-password-hashing), each wrote an in-depth yet approachable article about password hashing with a salt.
 
-<sup id="2">2</sup> **Cost** is the measure to figure out the x amount of iterations, or rounds, that a hashing algorithms is invoked over a password string. The default cost for Bcrypt is `10` or `10^2 == 1024 rounds` of hashing.
+<sup id="2">2</sup> **Cost** is the measure to figure out the x amount of iterations, or rounds, that a hashing algorithms is invoked over a password string. A default cost for Bcrypt could be considered at `10` or `10^2 == 1024 rounds` of hashing.
 
 <sup id="2">3</sup> **Entropy** is a measurement of how strong a password is; or how unpredictable it is to guess. The formula to calculate entropy bits is `log_2(S^L)`, where `S` is the size of a character set, and `L` is the password length. One example would be that a non-dictionary lowercase alphabet (a-z) password with 8 characters has an entropy of `log_2(26^8) == 38 bits` or up to `26^8 == 300 million` possible password combinations. Sounds like a lot (it is for desktop login), but consider that this password can be [theoretically be cracked in 50 minutes](https://security.stackexchange.com/a/182116)
