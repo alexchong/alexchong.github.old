@@ -3,6 +3,7 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown/with-html";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import style from "react-syntax-highlighter/dist/cjs/styles/prism/dracula";
+import gfm from "remark-gfm";
 
 import { Layout, SEO, Image } from "@components/common";
 import { getPostBySlug, getPostsSlugs } from "@utils/posts";
@@ -46,6 +47,7 @@ export default function Post({ post, frontmatter, nextPost, previousPost }) {
           className="content mb-4 prose lg:prose-lg dark:prose-dark"
           escapeHtml={false}
           source={post.content}
+          plugins={[gfm]}
           renderers={{
             code: CodeBlock,
             image: MarkdownImage,
