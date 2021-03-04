@@ -43,6 +43,7 @@ module.exports = {
     },
     fontFamily: {
       display: ["Open Sans", ...defaultSans],
+      display: [...defaultSans],
       body: ["Merriweather", ...defaultSerif],
     },
   },
