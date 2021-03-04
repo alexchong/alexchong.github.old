@@ -3,13 +3,13 @@
     "title": "Alex Chong",
     "author": {
       "firstName": "Alex",
-      "lastName": "Chong",
+      "fullName": "Alex Chong",
+      "job": "Software Engineer",
       "summary": "Software Engineer based in Seattle, WA"
     },
     "description": "I like to write about web, scripting, and security stuff.",
     "siteUrl": "https://alexchong.github.io",
     "language": "en-US",
-    "resume": "https://www.dropbox.com/s/r2uvznqmtb2xo77/Alex%20Chong%20Resume.pdf?dl=0",
     "social": {
       "linkedin": "https://www.linkedin.com/in/itsalexchong",
       "github": "https://www.github.com/alexchong",
