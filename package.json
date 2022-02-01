@@ -38,12 +38,12 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.3.1",
-    "autoprefixer": "^10.0.4",
-    "gray-matter": "^4.0.2",
+    "autoprefixer": "^10.4.2",
+    "gray-matter": "^4.0.3",
     "next-compose-plugins": "^2.2.1",
-    "postcss": "^8.1.10",
-    "postcss-nested": "^5.0.3",
-    "tailwindcss": "^2.0.1"
+    "postcss": "^8.4.5",
+    "postcss-nested": "^5.0.6",
+    "tailwindcss": "^2.2.19"
   },
   "license": "MIT",
   "repository": {
